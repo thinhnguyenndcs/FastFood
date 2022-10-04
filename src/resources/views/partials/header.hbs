@@ -1,0 +1,49 @@
+<nav>
+  <div class="menu">
+    <div class="logo">
+      <a href="#">
+        <img id="logo-img-home"src ="/img/home.png"> 
+      </a>
+      <div id="logo-text">
+        <a href="/">Back to Home</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="account">
+          <div class = "image-for-account">
+            <div id="account-text">
+              Hi, Ý!
+            </div>
+          </div>
+          <div class = "avatar">
+           <a href="#"> <img id="img-a" src ="https://vietmytour.vn/wp-content/uploads/2018/10/Size-Avatar-3.jpg"></a>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item loggout" href="/login">Đăng xuất</a></li>
+            </ul>
+          </div>
+          
+      </div>
+      <label for="check" class="btn bars"><i class="fas fa-bars"></i></label>
+      <div class="cart">
+        <image class="cart-image" src="/img/cart.png" onclick="onclicked()"/>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script type="text/javascript">
+  const onclicked = () => {
+    let className = document.getElementsByClassName("sidebar")[0].className;
+    if(className == 'sidebar'){
+      document.getElementsByClassName("sidebar")[0].className = 'sidebar sidebar-hide';
+    }
+    else{
+      document.getElementsByClassName("sidebar")[0].className = 'sidebar'
+    }
+  }
+</script>

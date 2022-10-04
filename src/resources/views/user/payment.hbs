@@ -1,0 +1,84 @@
+<div class="body">
+    {{>header}} 
+    <div class='container'>
+  <div class='window'>
+    <div class='order-info'>
+      <h1 id="align-center-me">Complete</h1>
+      <h1 id="align-center-me">your purchase</h1>
+      <h2 id="align-center-me">Just one more step,</h2>
+      <h2 id="align-center-me">thanks for your patience &#10084</h2>
+    </div>
+        <div class='credit-info'>
+          <div class='credit-info-content'>
+            <table class='half-input-table'>
+              <tr><td>Please select your card: </td><td><div class='dropdown' id='card-dropdown'><div class='dropdown-btn' id='current-card'>Visa</div>
+                <div class='dropdown-select'>
+                <ul>
+                  <li>ATM Card</li>
+                  {{!-- <li>American Express</li> --}}
+                  </ul></div>
+                </div>
+               </td></tr>
+            </table>
+            <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+            Card Number
+            <input class='input-field'></input>
+            Card Holder
+            <input class='input-field'></input>
+             <table class='half-input-table'>
+              <tr>
+                <td> Expires (YYYY/MM/DD)
+                  <input class='input-field'></input>
+                </td>
+                <td> CVC/CVV
+                  <input class='input-field'></input>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+
+{{!--             
+            <table class='half-input-table'>
+              <tr>
+                <td> Serial
+                  <input class='input-field'></input>
+                </td>
+                <td> Bank Name
+                  <input class='input-field'></input>
+                </td>
+              </tr>
+            </table> --}}
+            {{!-- <input class='input-field'></input> --}}
+            <button class='pay-btn' data-toggle="modal" data-target="#myModal" >Checkout</button>
+
+          </div>
+
+        </div>
+      </div>
+</div>
+    
+</div>
+<div class="modal" id="myModal">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Confirmnation</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  Payment Completed! Thank you &#10084
+               </div>
+               <!-- Modal footer -->
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+</div>
+<script src="/scripts/checkout.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

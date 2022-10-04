@@ -1,0 +1,156 @@
+.nav-right{
+  margin-bottom: 15px;
+  display: flex;
+  width: 260px;
+  float: right;
+}
+
+.cart{
+  float: right;
+  width: 40px;
+}
+
+.image-for-account{
+  margin-top: 7px;
+}
+
+nav {
+  width: 100%;
+  padding: 12px 0;
+  background: #ffffff;
+  box-shadow: 2px 2px 2px #b0b0b5; }
+
+nav .menu {
+  max-width: 1450px;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  align-items: center;
+  
+}
+.logo #img-a {
+  width: 35px;
+  height: 35px;
+  // border-radius: 50%;
+  margin: auto 5px; }
+.logo{
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+#logo-text{
+  align-items: center;
+}
+#logo-img-home{
+  width: 60px;
+  height: 60px;
+  background-color: fff;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.account {
+  position: relative;
+  display: flex;
+  width: 200px;
+  float: right; }
+  .account .avatar {
+    margin: auto 5px; }
+  .account .avatar #img-a {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin: auto 5px; }
+  .account h5 {
+    margin: auto 5px; }
+  .account .dropdown {
+    margin: auto 0; }
+    .account .dropdown button {
+    background: none;
+      // background-color: #b0b0b5;
+      border: none; 
+    }
+    .account .dropdown button i {
+      color: #000; }
+    .account .dropdown ul .loggout {
+      color: red; }
+
+.menu .logo a {
+  font-size: 28px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #31344b; }
+
+.btn-secondary {
+    color: rgb(0, 0, 0);
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.menu .text-bar {
+  list-style: none;
+  display: flex;
+  margin: auto; }
+  .menu .text-bar .sign-up {
+    background: #f47f41;
+    background: linear-gradient(78deg, #f47f41 0%, #f1556a 100%);
+    border-radius: 10px; }
+  .menu .text-bar .sign-up a {
+    color: #ffffff; }
+
+.menu .text-bar a {
+  margin: 0 8px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #31344b;
+  font-weight: 400;
+  display: inline-flex;
+  padding: 10px 12px;
+  position: relative;
+  transition: all 0.3s ease; }
+#account-text{
+  font-size: 20px;
+  font-weight: 600;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.upper {
+  font-size: 40px;
+  font-weight: 600;
+  color: #31344b; }
+
+.lower {
+  font-size: 40px;
+  font-weight: 600;
+  color: #31344b; }
+
+.menu .text-bar a:hover {
+  color: #f36d52; }
+
+.menu .text-bar .sign-up a:hover {
+  color: #fff;
+  font-weight: bold; }
+
+nav label.btn {
+  color: #31344b;
+  font-size: 18px;
+  cursor: pointer;
+  display: none; }
+
+nav label.cancel {
+  position: absolute;
+  top: 25px;
+  right: 30px; }
+
+#check {
+  display: none; }

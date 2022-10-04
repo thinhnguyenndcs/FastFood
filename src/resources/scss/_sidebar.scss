@@ -1,0 +1,256 @@
+.cart-image{
+    width: 40px;
+    height: 40px;
+}
+
+.cart:hover{
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.705);
+}
+
+.sidebar-hide{
+    height: 0;
+    width: 0;
+    left: 101%;
+    transition: height 0.5s, width 0.5s;
+}
+
+.sidebar{
+    z-index: 2;
+    height: 99%;
+    position: fixed;
+    right: 0.25%;
+    top: 0.5%;
+    width: 33%;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 13px;
+    transition: height 0.5s, width 0.5s;
+    -webkit-transition: height 0.25s, width 0.25s;
+    padding: 1.3%;
+    box-shadow: -3px 3px 5px gray;
+}
+
+.sidebar-header{
+    margin-bottom: 3%;
+}
+
+.sidebar-container{
+    margin-bottom: 4%;
+    max-height: 75%;
+    height: 75%;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.255);
+    border-top: 1px solid rgba(0, 0, 0, 0.255);
+}
+
+.sidebar-container::-webkit-scrollbar {
+    width: 0 !important;
+    display: none; 
+}
+
+.sidebar-item{
+    height: 100px;
+    border: 1px solid;
+    border-radius: 13px;
+    margin-bottom: 3%;
+    padding: 3% 0 3% 0;
+}
+
+.sidebar-item-img{
+    margin-left: 7%;
+    height: 75px;
+    width: 60%;
+}
+
+.sidebar-item-cpn1{
+    float: left;
+    width: 40%;
+}
+
+.sidebar-item-cpn2{
+    height: 90%;
+    float: right;
+    width: 60%;
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.sidebar-item-cpn2-1{
+    position: flex;
+    text-align: right;
+    align-items: center;
+    float: left;
+    width: 50%;
+    margin-bottom: 0%;
+    padding-right: 0%;
+}
+
+.sidebar-item-cpn2-2{
+    position: flex;
+    text-align: center;
+    align-items: center;
+    float: left;
+    width: 30%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+    font-size: 85%;
+    padding-left: 0%;
+}
+
+.sidebar-item-cpn2-1-left-1{
+    font-weight: bold;
+    font-size: 100%;
+    color: red;
+    margin-top: 13px;
+    margin-bottom: 0;
+    margin-right: 5%;
+    text-align: right;
+}
+
+.sidebar-item-cpn2-1-add{
+    margin-top: 5%;
+}
+
+.sidebar-item-add{
+    height: 100%;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.btn-outline-danger{
+    padding: 0.5%;
+    width: 30%;
+}
+
+.btn-outline-info{
+    padding: 0.5%;
+    width: 30%;
+}
+
+.btn-danger{
+    border-radius: 7px;
+    background-color: red;
+}
+
+.sidebar-payment{
+    height: 7%;
+}
+
+.sidebar-header-right{
+    display: flex;
+    float: right;
+    padding-top: 0;
+}
+
+.sidebar-close{
+    margin: 5px 0 0 3%;
+}
+
+.btnDine {
+    background-color: rgba(255, 255, 255, 0.479);
+    height: 100%;
+    border: 1px solid rgb(33, 146, 33);
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(33, 146, 33);
+    font-weight: bold;
+}
+
+.btnDine:hover{
+    background-color: rgb(33, 146, 33);
+    color: white;
+}
+
+.desc{
+    padding: 10px;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    width: 50%;
+    height: 5%;
+    float: left;
+}
+
+.sidebar-kr{
+    font-weight: bold;
+    font-size: 150%;
+    color: red;
+    text-align: right;
+}
+
+.sidebar-inc{
+    width: 100%;
+    font-size: 100%;
+    text-align: right;
+    margin-bottom: 4.5%;
+}
+
+.clear { clear: both }
+
+.sidebar-footer {
+    margin: 3% 0;
+    display: inline-flex;
+    justify-content: space-between;
+    display: flex;
+}
+
+.sidebar-total{
+    font-size: 120%;
+    font-weight: bold;
+    width: 30%;
+    float: left;
+    bottom: 30px;
+}
+
+.sidebar-totalright{
+    text-align: right;
+    width: 50%;
+    float: right;
+}
+
+@media screen and (max-width: 1193px) {
+    #sidebar{
+        height: 99%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #sidebar{
+        height: 99%;
+        width: 55%;
+    }
+    .sidebar-inc{
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 723px) {
+    #sidebar{
+        height: 99%;
+        width: 75%;
+    }
+    .sidebar-inc{
+        margin-bottom: 2.5%;
+    }
+    .sidebar-container{
+        margin-bottom: 2%;
+    }
+    .sidebar-header{
+        margin-top: 2%;
+        margin-bottom: 1.5%;
+    }
+}
+
+

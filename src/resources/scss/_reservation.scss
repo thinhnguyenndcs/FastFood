@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+.container-reservationUI {
+  margin: 0 auto;
+  padding: 50px;
+  background-image: url("/img/res2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+  background-color: #ccc;
+
+  .card {
+    width: 950px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    .card-header {
+      h3 {
+        color: white;
+        text-align: center;
+        font-size: 40px;
+      }
+    }
+    .card-body {
+      padding-top: 0;
+      form {
+        .form-group {
+          margin: 10px 0;
+          color: #eee;
+          label {
+            display: block;
+            font-family: "Roboto", sans-serif;
+            padding-bottom: 10px;
+            font-size: 1.25em;
+          }
+          input,
+          textarea {
+            border: 1px solid #777;
+            font-size: 1em;
+            font-family: "Roboto", sans-serif;
+            width: 100%;
+            padding: 10px;
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+          }
+          textarea {
+            height: 100px;
+          }
+        }
+        .people {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .w-33 {
+            width: 33.33%;
+          }
+          .mr4 {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    hr {
+      border: 1px dotted #ccc;
+    }
+  }
+  .button {
+    height: 50px;
+    background: #ffc312;
+    border: none;
+    color: #333;
+    font-size: 1.25em;
+    font-family: "Nanum Gothic";
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+}
+.myBtn{
+  width: 500px;
+}

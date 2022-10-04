@@ -1,0 +1,585 @@
+<div class="body">
+     {{>header}} 
+     {{>sidebar}}
+    <div class="slider-container">
+        <div class="slider-title">
+            <div class="verticalLine">
+            Feel hungry yet?
+            </div> 
+            <div class="table-reservation-container">
+                <div class="form-group">
+			        <a href="/reservation"  class="btn btn-primary btn-lg">Want to make a reservation?</a>
+			    </div>
+            </div>
+        </div>
+        
+        <div id="slider-title-2"><i>Try our best recipes, we ensure that you won't be disappointed~</i></div>
+        <div id="slider">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-touch="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col">
+                            <div class="single-box" onclick="RedirectFastFood();">
+                                <div class="img-area">
+                                    <img id="txt" src="img/Hamburger.png" alt="hamburger">
+                                </div>    
+                                <div class="img-text">
+                                    <h2>Fast Foods</h2>
+                                </div>        
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="single-box" onclick="RedirectSeaFood();">
+                                <div class="img-area">
+                                    <img id="txt" src="img/seafood.jpg" alt="seafood">
+                                </div>    
+                                <div class="img-text">
+                                    <h2>Sea Foods</h2>
+                                </div>        
+                            </div>
+                        </div>
+
+                    </div>  
+                </div>
+                <div class="carousel-item ">
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="single-box" onclick="RedirectVeganFood();">
+                                <div class="img-area">
+                                    <img id="txt" src="img/vegan-food.jpg" alt="veganfood">
+                                </div>    
+                                <div class="img-text">
+                                    <h2>Vegan Foods</h2>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="single-box" onclick="RedirectDrink();">
+                                <div class="img-area">
+                                    <img id="txt" src="img/soft-drink.jpg" alt="softdrink">
+                                </div>    
+                                <div class="img-text">
+                                    <h2>Drinks</h2>
+                                </div>
+                            </div>                       
+                        </div>
+                        {{!-- <div class="col">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img id="txt" src="img/juice.jpg" alt="juice">
+                                </div>    
+                                <div class="img-text">
+                                    <h2>Juice</h2>
+                                </div>   
+                            </div>
+                        </div> --}}
+                    </div>  
+                </div>
+            </div>
+            <button id="prev" class="carousel-control-prev " type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button id="next" class="carousel-control-next " type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </div>
+    </div> 
+    <div class="content">
+
+ 
+
+   <div id="fast-food">
+        <section id="main-menu">
+        <div class="verticalLine">
+            <h1>Fast Food</h1>
+        </div> 
+        </section>
+        <div class="foodItems" id="row-1">
+        <div class="FI">
+            <div class="food-image">
+                <img id="f-img" src ="/img/Hamburger.png">
+            </div>
+            <div class="dscp">
+                Hamburger
+            </div>
+            <div class="prices">
+                    $12.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/Hamburger.png','Hamburger','$12.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/coca.png">
+            </div>
+            <div class="dscp">
+                Coca
+            </div>
+            <div class="prices">
+                    $2.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/coca.png','Coca','$2.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/ff_2.png">
+            </div>
+            <div class="dscp">
+                Fries Fried
+            </div>
+            <div class="prices">
+                    $6.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/ff_2.png','Fries Fried','$6.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/fc.png">
+            </div>
+            <div class="dscp">
+                Fried Chicken
+            </div>
+            <div class="prices">
+                    $10.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/fc.png','Fried Chicken','$10.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+        </div>
+   </div>
+
+
+    <div id="sea-food">
+        <section id="main-menu-2">
+        <div class="verticalLine">
+            <h1>Sea Food</h1>
+        </div> 
+        </section>
+        <div class="foodItems" id="row-1">
+        <div class="FI">
+            <div class="food-image">
+                <img id="f-img" src ="/img/gss.jpg">
+            </div>
+            <div class="dscp">
+                Grilled Squid Satay
+            </div>
+            <div class="prices">
+                    $12.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/gss.jpg','Grilled Squid Satay','$12.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/bakedlobsterwithcheese5.jpg">
+            </div>
+            <div class="dscp">
+                Baked Loobster
+            </div>
+            <div class="prices">
+                    $60.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/bakedlobsterwithcheese5.jpg','Baked Loobster','$60.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/hnscrappot.jpg">
+            </div>
+            <div class="dscp">
+                Hot & Sour Crab pot
+            </div>
+            <div class="prices">
+                    $80.0
+            </div>
+            <div class ="submitItems">
+                   <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/hnscrappot.jpg','Hot & Sour Crab pot','$80.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/sfn.jpg">
+            </div>
+            <div class="dscp">
+                Sea food noodle 
+            </div>
+            <div class="prices">
+                    $30.0
+            </div>
+            <div class ="submitItems">
+                   <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/sfn.jpg','Sea food noodle','$30.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+        </div>
+    </div>
+
+    <div id="vegan-food">
+        <section id="main-menu-2">
+        <div class="verticalLine">
+            <h1>Vegan Food</h1>
+        </div> 
+        </section>
+        <div class="foodItems" id="row-1">
+        <div class="FI">
+            <div class="food-image">
+                <img id="f-img" src ="/img/vegan-noodles.jpg">
+            </div>
+            <div class="dscp">
+                Vegan noodle
+            </div>
+            <div class="prices">
+                    $12.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/vegan-noodles.jpg','Vegan noodle','$12.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/banh-mi.jpeg">
+            </div>
+            <div class="dscp">
+                Vegan banh mi
+            </div>
+            <div class="prices">
+                    $15.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/banh-mi.jpeg','Vegan banh mi','$15.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/vegan-pasta.jpg">
+            </div>
+            <div class="dscp">
+                Vegan pasta
+            </div>
+            <div class="prices">
+                    $30.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/vegan-pasta.jpg','Vegan pasta','$30.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/vegan-sandwich.jpg">
+            </div>
+            <div class="dscp">
+                Vegan sandwich
+            </div>
+            <div class="prices">
+                    $30.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/vegan-sandwich.jpg','Vegan sandwich','$30.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+        </div>
+    </div>
+
+    <div id="drink">
+        <section id="main-menu-2">
+        <div class="verticalLine">
+            <h1>Drink</h1>
+        </div> 
+        </section>
+        <div class="foodItems" id="row-1">
+        <div class="FI">
+            <div class="food-image">
+                <img id="f-img" src ="/img/oj.jpg">
+            </div>
+            <div class="dscp">
+                Orange juice
+            </div>
+            <div class="prices">
+                    $4.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/oj.jpg','Orange juice','$4.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/aj.jpg">
+            </div>
+            <div class="dscp">
+                Apple Juice
+            </div>
+            <div class="prices">
+                    $4.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/aj.jpg','Apple Juice','$4.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/mj.jpg">
+            </div>
+            <div class="dscp">
+                Grapefruit juice
+            </div>
+            <div class="prices">
+                    $4.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/mj.jpg','Grapefruit juice','$4.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/mangoj.jpg">
+            </div>
+            <div class="dscp">
+                Mango juice
+            </div>
+            <div class="prices">
+                    $4.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/mangoj.jpg','Mango juice','$4.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+        </div>
+        <div class="foodItems" id="row-1">
+        <div class="FI">
+            <div class="food-image">
+                <img id="f-img" src ="/img/iced-coffee.jpg">
+            </div>
+            <div class="dscp">
+                Iced Coffee
+            </div>
+            <div class="prices">
+                    $8.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/iced-coffee.jpg','Iced Coffee','$8.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/lemon-iced-tea.jpg">
+            </div>
+            <div class="dscp">
+                Iced Tea
+            </div>
+            <div class="prices">
+                    $4.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/lemon-iced-tea.jpg','Iced Tea','$4.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/milktea.jpg">
+            </div>
+            <div class="dscp">
+                Milk Tea
+            </div>
+            <div class="prices">
+                    $8.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/milktea.jpg','Milk Tea','$8.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+         <div class="FI" id="FIS">
+            <div class="food-image">
+                <img id="f-img" src ="/img/latte.jpg">
+            </div>
+            <div class="dscp">
+                Latte
+            </div>
+            <div class="prices">
+                    $10.0
+            </div>
+            <div class ="submitItems">
+                    <button type = "button" class ="buttonSubmitItems" onclick="openModal('/img/latte.jpg','Latte','$10.0')"><span class="btn1">Add to cart</span></button>
+            </div>
+        </div>
+        {{!--  --}}
+        </div>
+    </div>
+    {{!-- POP UP --}}
+        {{!-- -------Khoi-----------     --}}
+    <div class="modal fade" id="foodModal" tabindex="-1" role="dialog" aria-labelledby="foodModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content container">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="foodModalLabel">ADD TO CART</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="/img/Hamburger.png" alt="food" id="modal-food-img">
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                <div class="col-8">
+                                    <table>
+                                        <tr>
+                                            <th>SKU</th>
+                                            <th id="modal-food-name">Hamburger</th>
+                                        </tr>
+                                        <tr>
+                                            <td>401</td>
+                                            <td id="modal-food-name-2">Burger</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-4">
+                                    <span class="modal-subtitle">Unit Price</span><br/>
+                                    <span class="modal-price" id="modal-food-price">$ 12.0</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row " id="modal-quantity">
+                                <div class="col-4">
+                                    <span class="modal-subtitle">Quantity</span>
+                                </div>
+                                <div class="col-5 ms-auto " >
+                                    <button type="button" class="btn btn-outline-secondary modal-q-btn" onclick="modalQsub()">-</button>
+                                    <div class="modal-subtitle " id="modal-q-num">1</div>
+                                    <button type="button" class="btn btn-outline-danger modal-q-btn" onclick="modalQadd()">+</button>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <!-- -----------------Quyen---------------------------- -->
+                    <div class="row">
+                        <div class="detail-frame">
+                            <span class="modal-detail">Protein: </span>
+                            <span class="modal-infor">What is Lorem ipsum?</span> <br/>
+                            <span class="modal-detail">Additives: </span>
+                            <span class="modal-infor">03</span> <br/>
+                            <span class="modal-detail">Baking material: </span>
+                            <span class="modal-infor">040</span> <br/>
+                            <span class="modal-detail">Food decoration: </span>
+                            <span class="modal-infor">04</span> <br/> <br/>
+                        </div>
+                        <div class="detail-frame">
+                            <div class="row">
+                                <div class="col-6">
+                                    <span class="modal-subtitle">Side dishes (*)</span>
+                                </div>
+                                <div class="col-6">
+                                    <span class="modal-info-italic">  Selectic quantity: 0</span><br/>
+                                </div>
+                            </div>
+                            <span class="modal-info-italic">Please select one of the properties below</span>
+                            <label class="checkbox" for="myCheckboxId">
+                                <input checked class="checkbox--input" type="checkbox" name="myCheckboxName" id="myCheckboxId">
+                                <div class="checkbox--box"></div>
+                                Vegetables
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close" onclick="AddToCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
+                </div>
+                <!-- -----------------Quyen---------------------------- -->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    const number="modal-q-num";
+    const foodimg="modal-food-img";
+    const foodname1="modal-food-name";
+    const foodname2="modal-food-name-2";
+    const foodprice="modal-food-price";
+    function modalQadd(){
+        var num=parseInt(document.getElementById(number).innerText);
+        document.getElementById(number).innerText=num+1;
+    }
+    function modalQsub(){
+        var num=parseInt(document.getElementById(number).innerText);
+        if (num>0){
+            document.getElementById(number).innerText=num-1;
+        }   
+        
+    }
+    function openModal(image,foodName,Price){
+        $("#foodModal").modal("show");
+        
+        
+        const foodImgElement=document.getElementById(foodimg);
+        const foodName1Element=document.getElementById(foodname1);
+        const foodName2Element=document.getElementById(foodname2);
+        const foodPriceElement=document.getElementById(foodprice);
+        document.getElementById(number).innerText=1;
+        foodImgElement.src=image;
+        
+        foodName1Element.innerText=foodName;
+        foodName2Element.innerText=foodName;
+        foodPriceElement.innerText=Price;
+    }
+    function AddToCart(){
+    const quantity=parseInt(document.getElementById(number).innerText);
+    const foodName=document.getElementById(foodname1).innerText;
+    const foodPrice=parseFloat(document.getElementById(foodprice).innerText.slice(1));
+    const foodImg=document.getElementById(foodimg).src;
+    
+    order(foodName,foodPrice,foodImg,quantity);
+}
+    </script>
+
+    {{!-- -----------------khoi------------------ --}}
+    
+
+
+</div>
+{{!-- Script for redirect on slider --}}
+<script type="text/javascript">
+         <!--
+            function RedirectFastFood() {
+               window.location="http://127.0.0.1:3000/#fast-food";
+            }
+            function RedirectVeganFood() {
+               window.location="http://127.0.0.1:3000/#vegan-food";
+            }
+            function RedirectSeaFood() {
+               window.location="http://127.0.0.1:3000/#sea-food";
+            }
+            function RedirectDrink() {
+               window.location="http://127.0.0.1:3000/#drink";
+            }
+            
+         //-->
+</script>

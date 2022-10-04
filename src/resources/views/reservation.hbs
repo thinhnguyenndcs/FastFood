@@ -1,0 +1,77 @@
+{{>header}} 
+<div class="container-reservationUI">
+    <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+        <h3>Book Your Table Now</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="visitor_name" placeholder="Nguyen Van A" pattern=[A-Z\sa-z]{3,20} required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your E-mail</label>
+            <input type="email" id="email" name="visitor_email" placeholder="Van.A@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Your Phone</label>
+            <input type="tel" id="phone" name="visitor_phone" placeholder="0123456789" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+          </div>
+          <hr>
+          <div class="people">
+          <div class="form-group w-33 mr4">
+            <label for="adult">Adults</label>
+            <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+          </div>
+          <div class="form-group w-33 mr4">
+            <label for="child">Children</label>
+            <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+         
+          </div>
+          <div class="form-group w-33 ">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+           </div>
+          
+          <hr>
+          <div class="form-group">
+            <label for="message">Anything Else?</label>
+            <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Book Table" class="btn button" data-toggle="modal" data-target="#myModal">
+            
+          
+          </div>
+           </div>
+        </form>
+    </div>
+    </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Confirmnation</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  Congratulations! Your reservation has been sent!
+               </div>
+               <!-- Modal footer -->
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

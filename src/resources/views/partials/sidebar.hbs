@@ -1,0 +1,115 @@
+<script type="text/javascript">
+
+    const onClickUp = (e) => {
+        e.parentNode.getElementsByClassName("sidebar-amount-item")[0].innerHTML++;
+        total += Number(e.parentNode.getElementsByClassName("sidebar-amount-item")[0].getAttribute("price"));
+        document.getElementById("sidebar-kr").innerHTML = total.toFixed(1);
+    }
+    
+    const onClickDown = (e) => {
+        const amount = e.parentNode.getElementsByClassName("sidebar-amount-item")[0].innerHTML;
+        if(amount > 1) e.parentNode.getElementsByClassName("sidebar-amount-item")[0].innerHTML--;
+        else{
+            let name = e.parentNode.getElementsByClassName("sidebar-amount-item")[0].getAttribute("name");
+            let i = order_item_list.findIndex((e) => e === name);
+            const a1 = order_item_list.slice(0, i);
+            const a2 = order_item_list.slice(i + 1, order_item_list.length);
+            order_item_list = a1.concat(a2);
+            const item_current = e.parentNode.parentNode.parentNode.parentNode;
+            item_current.parentNode.removeChild(item_current);
+        }
+        total -= Number(e.parentNode.getElementsByClassName("sidebar-amount-item")[0].getAttribute("price"));
+        document.getElementById("sidebar-kr").innerHTML = total.toFixed(1);
+    }
+
+    const onclickDelete = (e) => {
+        let name = e.parentNode.getElementsByClassName("sidebar-amount-item")[0].getAttribute("name");
+        let i = order_item_list.findIndex((e) => e === name);
+        const a1 = order_item_list.slice(0, i);
+        const a2 = order_item_list.slice(i + 1, order_item_list.length);
+        order_item_list = a1.concat(a2);
+        const amount = e.parentNode.getElementsByClassName("sidebar-amount-item")[0].innerHTML;
+        total -= amount*Number(e.parentNode.getElementsByClassName("sidebar-amount-item")[0].getAttribute("price"));
+        document.getElementById("sidebar-kr").innerHTML = total.toFixed(1);
+        const item_current = e.parentNode.parentNode;
+        item_current.parentNode.removeChild(item_current);
+    }
+
+    let order_item_list = [];
+    let total = 0;
+    let id = 0;
+
+    function order(itemname = "Hamburger", itemprice = 100, itemimage = "/img/Hamburger.png", itemquantity = 1) {
+        if(order_item_list.find((e) => {return e === itemname; })){
+            let quantity = Number(document.getElementById(`sidebar-item-${itemname}`).getElementsByClassName("sidebar-amount-item")[0].innerHTML) + itemquantity;
+            document.getElementById(`sidebar-item-${itemname}`).getElementsByClassName("sidebar-amount-item")[0].innerHTML = quantity;
+            total += itemquantity*itemprice;
+            document.getElementById("sidebar-kr").innerHTML = total.toFixed(1);
+            return;
+        }
+
+        order_item_list.push(itemname);
+        
+        let orderlist = document.getElementById('sidebar-container');
+
+        let container = document.createElement('div');
+
+        container.className = 'sidebar-item';
+
+        container.id = `sidebar-item-${itemname}`;
+
+        container.innerHTML = `
+            <div class="sidebar-item-cpn1">
+                <img class="sidebar-item-img" src="${itemimage}">
+            </div>
+            <div>
+                <p class="sidebar-item-cpn2-2" style="font-weight: bold;">${itemname}</p>
+                <button onclick="onclickDelete(this)" type="button" class="btn-close" style="margin-left: 20%;" aria-label="Close"></button>
+                <div class="sidebar-item-cpn2">
+                    <div class="sidebar-item-cpn2-1 sidebar-item-cpn2-1-add">
+                        <button onclick="onClickDown(this)" id="button" type="button" class="btn btn-outline-danger sidebar-item-add" style="font-weight: bold;">-</button>
+                        <p class="sidebar-item-add sidebar-amount-item" name="${itemname}" price="${itemprice}" quantity="${itemquantity}">${itemquantity}</p>
+                        <button onclick="onClickUp(this)" type="button" class="btn btn-outline-info sidebar-item-add" style="font-weight: bold;">+</button>
+                    </div>
+                    <div class="sidebar-item-cpn2-1">
+                        <p class=" sidebar-item-cpn2-1-left-1">$ ${itemprice.toFixed(1)}</p>                   
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>`
+        orderlist.appendChild(container);
+        total += itemprice*itemquantity;
+        document.getElementById("sidebar-kr").innerHTML = total.toFixed(1);
+        id++;
+    };
+
+</script>
+
+    <div>
+        <div class="sidebar sidebar-hide">
+        <div class="sidebar-header">
+            <img src="/img/cart.png" style="width: 10%; height: 3%; float: left">    
+            <div class="sidebar-kr" style="width: 82%; height: 5%; float: left; text-align: left">Your Cart</div>
+            <div class="sidebar-header-right" style="width: 8%; text-align: right">
+                <button onclick="onclicked()" type="button" class="btn-close sidebar-close" aria-label="Close"></button>
+            </div>
+            <div class="clear"></div>
+        </div>
+   
+    
+        <div class="sidebar-container" id="sidebar-container">
+
+        </div>
+        
+        <div class="sidebar-footer">
+            <span class="sidebar-total">TOTAL:</span>
+            <div class="sidebar-totalright">
+                <span class="sidebar-kr">$ </span>
+                <span class="sidebar-kr" id="sidebar-kr">0.0</span>
+            </div>
+        </div>
+        
+        <div class="d-grid gap-2 sidebar-payment">
+            <a href="/payment"  class="btn btn-danger" type="button" style="font-weight: bold; font-size: 130%;">PAYMENT</a>
+        </div>    
+    </div>
