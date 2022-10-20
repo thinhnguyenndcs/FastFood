@@ -1,8 +1,10 @@
-At first, you must run the following command:
+# Website bán thức ăn nhanh
+Sử dụng công nghệ HTML, CSS và Nodejs.
+
+> Đầu tiên chạy lệnh 
 ### `npm install`
 
-In the project directory, you can run:
-
+Sau đó chạy lệnh
 ### `npm start`
 
 Runs the app in the development mode.\
