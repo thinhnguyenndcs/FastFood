@@ -1,6 +1,8 @@
 # Website bán thức ăn nhanh
 Sử dụng công nghệ HTML, CSS và Nodejs.
 
+## Các bước chạy hệ thống
+
 > Đầu tiên chạy lệnh 
 ### `npm install`
 
