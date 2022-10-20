@@ -9,5 +9,5 @@ Sử dụng công nghệ HTML, CSS và Nodejs.
 ### > Sau đó chạy lệnh
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Chạy ứng dụng ở chế độ development.\
+Mở [http://localhost:3000](http://localhost:3000) để xem hệ thống trên trình duyệt.
